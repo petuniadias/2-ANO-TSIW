@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(255, 198, 93);
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+
+        let myCanvas = document.getElementById("myCanvas");
+        let ctx = myCanvas.getContext("2d");
+
+        let W = myCanvas.width = 400;
+        let H = myCanvas.height = 400;
+
+        ctx.fillStyle = "#00F00";
+        ctx.fillRect(0, 0, W, H);
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(W/2 - 50, H/2 - 50, 100, 100);
+
+        ctx.globalAlpha = 0.5; //opacidade
+        ctx.strokeStyle = "rgb(255, 0, 0, 0.5)";
+        ctx.lineWidth = 5;
+        ctx.stokeRect(150, 50, 100, 20);
+
+        ctx.clearRect(175, 75, 50, 50);
+
+    </script>
+</body>
+</html>

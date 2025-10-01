@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Flags</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="text-align: center;">
+        <h1>Draw Flags</h1>
+        <div style="margin-bottom: 10px;">
+            <button onclick="drawGermany()">Germany</button>
+            <button onclick="drawFrance()">France</button>
+            <button onclick="drawSweden()">Sweden</button>
+            <button onclick="drawSwitzerland()">Switzerland</button>
+        </div>
+        <canvas id="flagCanvas" width="300" height="200"></canvas>
+    </div>
+
+
+    <script>
+        const canvas = document.getElementById('flagCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let W = canvas.width;
+        let H = canvas.height;
+
+        function drawGermany() {
+            //TODO
+            ctx.clearRect(0, 0, W, H);
+            
+            ctx.fillStyle = "#000";
+            ctx.fillRect(0, 0, W, H/3);
+            
+            ctx.fillStyle = "#DD0000";
+            ctx.fillRect(0, H/3, W, H/3);
+
+            ctx.fillStyle = "#FFCE00";
+            ctx.fillRect(0, 2*H/3, W, H/3);
+        }
+
+        function drawFrance() {
+            //TODO
+            ctx.clearRect(0, 0, W, H);
+
+            ctx.fillStyle = "#e30000";
+            ctx.fillRect(0, 0, W/3, H);
+            
+            ctx.fillStyle = "#FFF";
+            ctx.fillRect(W/3, 0, W/3, H);
+
+            ctx.fillStyle = "#091491";
+            ctx.fillRect(2*W/3, 0, W/3, H);
+
+        }
+
+        function drawSweden() {
+            //TODO  
+            ctx.clearRect(0, 0, W, H);
+
+            ctx.fillStyle = "#0400ff";
+            ctx.fillRect(0, 0, W, H);
+
+            ctx.fillStyle = "#ffea00";
+            ctx.fillRect(0, H/2 - 10, W, H/5);
+            ctx.fillRect(W/3 - 10, 0, W/6, H);
+            
+
+        }
+
+        function drawSwitzerland() {
+            //TODO
+            ctx.clearRect(0, 0, W, H);
+
+            ctx.fillStyle = "#db0000";
+            ctx.fillRect(0, 0, W, H);
+
+            ctx.fillStyle = "#fff";
+            ctx.fillRect(W/2 - 15, H/2 - 60, W * 0.1, H * 0.6);
+            ctx.fillRect(W/2 - 60, H/2 - 15, W * 0.4, H * 0.15);
+        }
+    </script>
+</body>
+
+</html>
