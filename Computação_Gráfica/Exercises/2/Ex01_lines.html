@@ -44,9 +44,8 @@
       ctx.lineTo(W/2 + 50, 145);
       ctx.lineTo(150, 145);
       ctx.lineTo(150, 50);
-      ctx.strokeStyle = "green";
+      ctx.strokeStyle = "rgba(0,255,0,0.5)";
       ctx.lineWidth = 5;
-      ctx.globalAlpha = 0.7;
       ctx.stroke();
 
       /* 1. What happens if you forget to create a new path, before drawing
@@ -60,6 +59,23 @@
       ctx.clearRect(0, 0, canvas.width, canvas.height); //erase Canvas
 
       //TODO
+      ctx.beginPath();
+      ctx.moveTo(50, 25);
+      ctx.lineTo(50, 125);
+      ctx.lineTo(150, 25);
+      ctx.lineTo(150, 125);
+      ctx.lineTo(250, 25);
+      ctx.lineTo(250, 125);
+      ctx.strokeStyle = "rgb(255,0,0)"
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      /* 2. What happens if you draw the path using fill() instead of
+            stroke()?
+          
+          It fills the inside of the path, and even if it's not closed, 
+          it appears closed when filled.
+      */
     }
 
     function ex3() {
