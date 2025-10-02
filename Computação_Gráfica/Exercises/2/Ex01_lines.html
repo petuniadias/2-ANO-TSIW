@@ -98,13 +98,39 @@
 
     //CANVAS SIZE
     const W = canvas.width, H = canvas.height;
+
+    let running = false;
+
     function ex4() {
       ctx.clearRect(0, 0, W, H); //erase Canvas
+      running = true;
       render(); // invoca a função de animação
     }
 
+
+
     function render() {
       //TODO
+      if(!running) return;
+      
+      // center point
+      const cx = W / 2;
+      const cy = H / 2;
+
+      // random endpoint
+      const x = Math.random() * W;
+      const y = Math.random() * H;
+
+      // draw line
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(x, y);
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = getRandomColor();
+      ctx.stroke();
+      ctx.closePath();
+
+      requestAnimationFrame(render);
     }
 
 
