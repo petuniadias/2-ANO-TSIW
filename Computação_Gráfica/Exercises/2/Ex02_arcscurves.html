@@ -32,6 +32,37 @@
       ctx.clearRect(0, 0, W, H); //erase Canvas
 
       //TODO
+      ctx.beginPath();
+      ctx.arc(50, H/2, 40, 0, Math.PI * 2, true);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.arc(140, H/2, 40, 0, Math.PI, false);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.arc(230, H/2, 40, 0, Math.PI, true);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.arc(320, H/2, 40, 0, 3*Math.PI/5, true);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.arc(410, H/2, 40, 0, 3*Math.PI/5, false);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+
+
     }
 
     function ex2() {
