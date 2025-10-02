@@ -47,6 +47,7 @@
       ctx.strokeStyle = "rgba(0,255,0,0.5)";
       ctx.lineWidth = 5;
       ctx.stroke();
+      ctx.closePath();
 
       /* 1. What happens if you forget to create a new path, before drawing
             the green rectangle?
@@ -69,6 +70,7 @@
       ctx.strokeStyle = "rgb(255,0,0)"
       ctx.lineWidth = 2;
       ctx.stroke();
+      ctx.closePath();
 
       /* 2. What happens if you draw the path using fill() instead of
             stroke()?
@@ -89,7 +91,9 @@
       ctx.lineTo(50, 10);
       ctx.lineTo(90, 70);
       ctx.lineWidth = 5;
+      ctx.strokeStyle = "black";
       ctx.stroke();
+      ctx.closePath();
     }
 
     //CANVAS SIZE
