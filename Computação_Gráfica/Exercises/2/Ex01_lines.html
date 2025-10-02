@@ -25,6 +25,7 @@
     const ctx = canvas.getContext("2d");
 
     function ex1() {
+      running = false;
       ctx.clearRect(0, 0, canvas.width, canvas.height); //erase Canvas
 
       //TODO
@@ -57,6 +58,7 @@
     }
 
     function ex2() {
+      running = false;
       ctx.clearRect(0, 0, canvas.width, canvas.height); //erase Canvas
 
       //TODO
@@ -81,6 +83,7 @@
     }
 
     function ex3() {
+      running = false;
       ctx.clearRect(0, 0, canvas.width, canvas.height); //erase Canvas
 
       //TODO
@@ -98,19 +101,16 @@
 
     //CANVAS SIZE
     const W = canvas.width, H = canvas.height;
-
-    let running = false;
+    let running = true;
 
     function ex4() {
       ctx.clearRect(0, 0, W, H); //erase Canvas
-      running = true;
       render(); // invoca a função de animação
     }
 
-
-
     function render() {
       //TODO
+
       if(!running) return;
       
       // center point
