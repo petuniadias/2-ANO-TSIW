@@ -82,6 +82,14 @@
       ctx.clearRect(0, 0, canvas.width, canvas.height); //erase Canvas
 
       //TODO
+
+      ctx.beginPath();
+      ctx.rect(20, 60, 60, 60);
+      ctx.moveTo(10, 70);
+      ctx.lineTo(50, 10);
+      ctx.lineTo(90, 70);
+      ctx.lineWidth = 5;
+      ctx.stroke();
     }
 
     //CANVAS SIZE
