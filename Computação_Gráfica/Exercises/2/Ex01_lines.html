@@ -28,6 +28,32 @@
       ctx.clearRect(0, 0, canvas.width, canvas.height); //erase Canvas
 
       //TODO
+      ctx.beginPath();
+      ctx.moveTo(125, 25);
+      ctx.lineTo(W/2 + 20, 25)
+      ctx.lineTo(W/2 + 20, 110);
+      ctx.lineTo(125, 110);
+      ctx.lineTo(125, 25);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.moveTo(150, 50);
+      ctx.lineTo(W/2 + 50, 50);
+      ctx.lineTo(W/2 + 50, 145);
+      ctx.lineTo(150, 145);
+      ctx.lineTo(150, 50);
+      ctx.strokeStyle = "green";
+      ctx.lineWidth = 5;
+      ctx.globalAlpha = 0.7;
+      ctx.stroke();
+
+      /* 1. What happens if you forget to create a new path, before drawing
+            the green rectangle?
+          
+            Both rectangles have a border
+      */
     }
 
     function ex2() {
