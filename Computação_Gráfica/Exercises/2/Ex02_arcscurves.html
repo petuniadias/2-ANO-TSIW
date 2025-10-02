@@ -72,36 +72,69 @@
       ctx.strokeStyle = "blue";
       ctx.lineWidth = 10;
       ctx.stroke();
+      ctx.closePath();
 
       ctx.beginPath();
       ctx.arc(W/2 - 50, H/2 + 40, 40, 0, Math.PI * 2);
       ctx.strokeStyle = "yellow";
       ctx.lineWidth = 10;
       ctx.stroke();
+      ctx.closePath();
 
       ctx.beginPath();
       ctx.arc(W/2, H/2, 40, 0, Math.PI * 2);
       ctx.strokeStyle = "black";
       ctx.lineWidth = 10;
       ctx.stroke();
+      ctx.closePath();
 
       ctx.beginPath();
       ctx.arc(W/2 + 50, H/2 + 40, 40, 0, Math.PI * 2);
       ctx.strokeStyle = "green";
       ctx.lineWidth = 10;
       ctx.stroke();
+      ctx.closePath();
 
       ctx.beginPath();
       ctx.arc(W/2 + 100, H/2, 40, 0, Math.PI * 2);
       ctx.strokeStyle = "red";
       ctx.lineWidth = 10;
       ctx.stroke();
+      ctx.closePath();
     }
 
     function ex3() {
       ctx.clearRect(0, 0, W, H); //erase Canvas
 
       //TODO
+
+      ctx.beginPath(150, 60);
+      //start at point 0 – little green circle
+      ctx.moveTo(150,60);
+      //1st curve: end at point 1
+      ctx.bezierCurveTo(150,30,120,30,90,30);
+      //2nd
+      ctx.bezierCurveTo(60,30,30,60,30,90);
+      //3rd
+      ctx.bezierCurveTo(30,180,90,210,150,240);
+      //4th
+      ctx.bezierCurveTo(210,210,270,180,270,90);
+      //5th
+      ctx.bezierCurveTo(270,60,240,30,210,30);
+      //6th
+      ctx.bezierCurveTo(180,30,150,30,150,60);
+      /*
+      ctx.bezierCurveTo(90,30,30,30,30,90);
+      ctx.bezierCurveTo(30,90,30,180,150,240);
+      ctx.bezierCurveTo(150,240,270,180,270,90);
+      ctx.bezierCurveTo(270,90,270,30,210,30);
+      ctx.bezierCurveTo(210,30,150,30,150,60);
+      */
+
+
+      //stroke heart with red line
+      ctx.strokeStyle = "red";
+      ctx.stroke();
     }
 
 
