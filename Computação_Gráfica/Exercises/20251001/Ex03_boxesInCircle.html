@@ -54,6 +54,14 @@
 
       //TODO
       //....
+      for (let i = 0; i < N; i++) {
+        let angle = (2 * Math.PI / N) * i;
+        let x = cX + R * Math.cos(angle);
+        let y = cY + R * Math.sin(angle);
+
+        ctx.fillRect(x - D/2, y - D/2, D, D);
+      }
+
     }
   </script>
 </body>
