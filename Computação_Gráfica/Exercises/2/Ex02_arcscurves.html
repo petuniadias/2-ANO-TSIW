@@ -61,14 +61,41 @@
       ctx.fillStyle = "blue";
       ctx.fill();
       ctx.closePath();
-
-
     }
 
     function ex2() {
       ctx.clearRect(0, 0, W, H); //erase Canvas
 
       //TODO
+      ctx.beginPath();
+      ctx.arc(W/2 - 100, H/2, 40, 0, Math.PI * 2);
+      ctx.strokeStyle = "blue";
+      ctx.lineWidth = 10;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(W/2 - 50, H/2 + 40, 40, 0, Math.PI * 2);
+      ctx.strokeStyle = "yellow";
+      ctx.lineWidth = 10;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(W/2, H/2, 40, 0, Math.PI * 2);
+      ctx.strokeStyle = "black";
+      ctx.lineWidth = 10;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(W/2 + 50, H/2 + 40, 40, 0, Math.PI * 2);
+      ctx.strokeStyle = "green";
+      ctx.lineWidth = 10;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(W/2 + 100, H/2, 40, 0, Math.PI * 2);
+      ctx.strokeStyle = "red";
+      ctx.lineWidth = 10;
+      ctx.stroke();
     }
 
     function ex3() {
